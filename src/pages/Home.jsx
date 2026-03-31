@@ -173,7 +173,15 @@ const Home = () => {
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
           >
             {[vid1, vid2, vid3].map((videoSrc, idx) => (
-              <motion.div key={idx} variants={fadeInUp} className="video-card">
+              <motion.a 
+                 key={idx} 
+                 variants={fadeInUp} 
+                 className="video-card"
+                 href="https://www.instagram.com/suvarnajewellersdehradun"
+                 target="_blank"
+                 rel="noreferrer"
+                 style={{ display: 'block' }}
+              >
                  <video autoPlay loop muted playsInline className="ig-video">
                    <source src={videoSrc} type="video/mp4" />
                  </video>
@@ -181,7 +189,7 @@ const Home = () => {
                     <PlayCircle size={40} className="gold-text" />
                     <span>Watch Reel</span>
                  </div>
-              </motion.div>
+              </motion.a>
             ))}
           </motion.div>
         </div>
