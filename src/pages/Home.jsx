@@ -14,7 +14,7 @@ import catNeckless from '../assets/OurCollection/Neckless.png';
 import vid1 from '../assets/Videos/video1.mp4';
 import vid2 from '../assets/Videos/video2.mp4';
 import vid3 from '../assets/Videos/video3.mp4';
-import whyImg from '../assets/About/first.webp';
+import whyImg from '../assets/About/third.png';
 
 const Home = () => {
   const heroImages = [heroImg1, heroImg2];
