@@ -27,6 +27,17 @@ const BookAppointment = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    const { name, phone, date, message } = formData;
+    const text = `*New Appointment Request*
+Name: ${name}
+Phone: ${phone}
+Preferred Date: ${date}
+Requirements: ${message}`;
+    
+    const whatsappUrl = `https://wa.me/919634072072?text=${encodeURIComponent(text)}`;
+    window.open(whatsappUrl, '_blank');
+
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
